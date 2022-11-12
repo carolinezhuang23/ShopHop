@@ -28,9 +28,28 @@ namespace ShopHop
 
         private void addItem_Click(object sender, EventArgs e)
         {
-
+            if (this.textBoxName.Text != "")
+            {
+                NameList.Items.Add(this.textBoxName.Text);
+                this.textBoxName.Focus();
+                this.textBoxName.Clear();
+            }
+            //If user did not enter any values then else block executes
+            else
+            {
+                MessageBox.Show("Please enter a name to add..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.textBoxName.Focus();
+            }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.NameList.SelectedIndex >= 0)
+            {
+                this.NameList.Items.RemoveAt(this.NameList.SelectedIndex);
+            }
+        }
         
-    }
+
+        }
 }
