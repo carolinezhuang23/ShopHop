@@ -30,7 +30,7 @@ namespace ShopHop
         {
             if (this.textBoxName.Text != "")
             {
-                NameList.Items.Add(this.textBoxName.Text);
+                groceryList.Items.Add(this.textBoxName.Text);
                 this.textBoxName.Focus();
                 this.textBoxName.Clear();
             }
@@ -44,9 +44,9 @@ namespace ShopHop
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (this.NameList.SelectedIndex >= 0)
+            if (this.groceryList.SelectedIndex >= 0)
             {
-                this.NameList.Items.RemoveAt(this.NameList.SelectedIndex);
+                this.groceryList.Items.RemoveAt(this.groceryList.SelectedIndex);
             }
         }
         
