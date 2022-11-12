@@ -39,10 +39,10 @@ namespace ShopHop
         private void editListButton_Click(object sender, EventArgs e)
         {
             //display edit form
-            EditListForm editListButton = new EditListForm();
-            editListButton.ShowDialog();
 
-            //Grocery list shows up on 
+            //Grocery list shows up on edit list page
+            EditListForm form = new EditListForm(groceryList.Items);
+            form.Show();
         }
     }
 }
