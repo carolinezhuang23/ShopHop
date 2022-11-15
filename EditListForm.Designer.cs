@@ -31,10 +31,12 @@ namespace ShopHop
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.addItemButton = new System.Windows.Forms.Button();
             this.addItemTextBox = new System.Windows.Forms.TextBox();
             this.addLabel = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.deleteTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +54,8 @@ namespace ShopHop
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.deleteTextBox);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.addItemButton);
             this.groupBox1.Controls.Add(this.addItemTextBox);
             this.groupBox1.Controls.Add(this.addLabel);
@@ -61,6 +65,15 @@ namespace ShopHop
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit Grocery List";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Delete:";
             // 
             // addItemButton
             // 
@@ -100,6 +113,13 @@ namespace ShopHop
             this.listBox2.TabIndex = 2;
             this.listBox2.Tag = "";
             // 
+            // deleteTextBox
+            // 
+            this.deleteTextBox.Location = new System.Drawing.Point(57, 142);
+            this.deleteTextBox.Name = "deleteTextBox";
+            this.deleteTextBox.Size = new System.Drawing.Size(242, 20);
+            this.deleteTextBox.TabIndex = 4;
+            // 
             // EditListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,5 +147,7 @@ namespace ShopHop
         private System.Windows.Forms.TextBox addItemTextBox;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button addItemButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox deleteTextBox;
     }
 }
