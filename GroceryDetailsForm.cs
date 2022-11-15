@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopHop.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,24 +16,26 @@ namespace ShopHop
         public GroceryDetailsForm()
         {
             InitializeComponent();
+        }
+
+        private void GroceryDetailsForm_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+            this.SetControls();
+        }
+
+        private void SetControls()
+        {
+            this.PopulateGroceries();
+        }
+
+        private void PopulateGroceries()
+        {
             //Example grocery items 
-            groceryList.Items.Add("milk");
-            groceryList.Items.Add("eggs");
-            groceryList.Items.Add("cheese");
-            groceryList.SelectionMode = SelectionMode.MultiSimple;
-        }
-
-        //Header
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //Grocery List
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            lstGroceryList.Items.Add("milk");
+            lstGroceryList.Items.Add("eggs");
+            lstGroceryList.Items.Add("cheese");
+            lstGroceryList.SelectionMode = SelectionMode.MultiSimple;
         }
 
         //Editing Grocery List
@@ -41,8 +44,33 @@ namespace ShopHop
             //display edit form
 
             //Grocery list shows up on edit list page
-            EditListForm form = new EditListForm(groceryList.Items);
+            EditListForm form = new EditListForm(lstGroceryList.Items);
             form.Show();
         }
+
+        private void deleteListButton_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to delete the Grocery List?";
+
+            DialogResult result = MessageBox.Show(message, TitlesModel.MessageBoxTitle,
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+            {
+                this.lstGroceryList.Items.Clear();
+                
+            }
+
+
+            //display confirmation of deletion
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            this.PopulateGroceries();
+        }
+
+    
     }
 }

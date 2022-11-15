@@ -29,23 +29,24 @@ namespace ShopHop
         /// </summary>
         private void InitializeComponent()
         {
-            this.groceryList = new System.Windows.Forms.ListBox();
+            this.lstGroceryList = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.editListButton = new System.Windows.Forms.Button();
             this.deleteListButton = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // groceryList
+            // lstGroceryList
             // 
-            this.groceryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
-            this.groceryList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.groceryList.FormattingEnabled = true;
-            this.groceryList.ItemHeight = 25;
-            this.groceryList.Location = new System.Drawing.Point(42, 100);
-            this.groceryList.Name = "groceryList";
-            this.groceryList.Size = new System.Drawing.Size(273, 429);
-            this.groceryList.TabIndex = 1;
-            this.groceryList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lstGroceryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.lstGroceryList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.lstGroceryList.FormattingEnabled = true;
+            this.lstGroceryList.ItemHeight = 25;
+            this.lstGroceryList.Location = new System.Drawing.Point(42, 100);
+            this.lstGroceryList.Name = "lstGroceryList";
+            this.lstGroceryList.Size = new System.Drawing.Size(273, 429);
+            this.lstGroceryList.TabIndex = 1;
+           
             // 
             // label1
             // 
@@ -58,7 +59,6 @@ namespace ShopHop
             this.label1.TabIndex = 2;
             this.label1.Text = "Grocery Details";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // editListButton
             // 
@@ -82,6 +82,19 @@ namespace ShopHop
             this.deleteListButton.TabIndex = 4;
             this.deleteListButton.Text = "Delete";
             this.deleteListButton.UseVisualStyleBackColor = false;
+            this.deleteListButton.Click += new System.EventHandler(this.deleteListButton_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.btnAdd.Location = new System.Drawing.Point(418, 346);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(210, 56);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Add Original Items";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // GroceryDetailsForm
             // 
@@ -89,21 +102,24 @@ namespace ShopHop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(685, 579);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.deleteListButton);
             this.Controls.Add(this.editListButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.groceryList);
+            this.Controls.Add(this.lstGroceryList);
             this.Name = "GroceryDetailsForm";
             this.Text = "GroceryDetailsForm";
+            this.Load += new System.EventHandler(this.GroceryDetailsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ListBox groceryList;
+        private System.Windows.Forms.ListBox lstGroceryList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button editListButton;
         private System.Windows.Forms.Button deleteListButton;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
