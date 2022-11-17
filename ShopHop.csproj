@@ -52,6 +52,7 @@
     <Compile Include="EditListForm.Designer.cs">
       <DependentUpon>EditListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroceryList.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

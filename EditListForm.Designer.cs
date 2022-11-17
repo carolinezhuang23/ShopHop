@@ -31,12 +31,12 @@ namespace ShopHop
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.deleteTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.addItemButton = new System.Windows.Forms.Button();
             this.addItemTextBox = new System.Windows.Forms.TextBox();
             this.addLabel = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.deleteTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,13 @@ namespace ShopHop
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit Grocery List";
             // 
+            // deleteTextBox
+            // 
+            this.deleteTextBox.Location = new System.Drawing.Point(57, 142);
+            this.deleteTextBox.Name = "deleteTextBox";
+            this.deleteTextBox.Size = new System.Drawing.Size(242, 20);
+            this.deleteTextBox.TabIndex = 4;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -91,6 +98,7 @@ namespace ShopHop
             this.addItemTextBox.Name = "addItemTextBox";
             this.addItemTextBox.Size = new System.Drawing.Size(250, 20);
             this.addItemTextBox.TabIndex = 1;
+            this.addItemTextBox.TextChanged += new System.EventHandler(this.addItemTextBox_TextChanged);
             // 
             // addLabel
             // 
@@ -112,13 +120,6 @@ namespace ShopHop
             this.listBox2.Size = new System.Drawing.Size(313, 379);
             this.listBox2.TabIndex = 2;
             this.listBox2.Tag = "";
-            // 
-            // deleteTextBox
-            // 
-            this.deleteTextBox.Location = new System.Drawing.Point(57, 142);
-            this.deleteTextBox.Name = "deleteTextBox";
-            this.deleteTextBox.Size = new System.Drawing.Size(242, 20);
-            this.deleteTextBox.TabIndex = 4;
             // 
             // EditListForm
             // 

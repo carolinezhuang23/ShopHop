@@ -12,6 +12,7 @@ namespace ShopHop
 {
     public partial class EditListForm : Form
     {
+        public ShopHop.GroceryList GClist;
         private void EditListForm_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
@@ -26,12 +27,16 @@ namespace ShopHop
 
         private void addItemButton_Click(object sender, EventArgs e)
         {
-            TextBox TextBoxItem = new TextBox();
+            
             // set TextBoxItem properties here
             
 
         }
 
-        
+        private void addItemTextBox_TextChanged(object sender, EventArgs e)
+        {
+            TextBox TextBoxItem = new TextBox();
+            GClist.addItem(TextBoxItem.Text);
+        }
     }
 }
