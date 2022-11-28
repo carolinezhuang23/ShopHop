@@ -27,7 +27,7 @@ namespace ShopHop
         }
 
         //adding items to grocery list 
-        public void addItem(string name)
+        public  void addItem(string name)
         {
             groceryItems.Add(new GroceryItem(name));
         }

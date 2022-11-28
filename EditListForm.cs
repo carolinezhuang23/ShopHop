@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,17 @@ namespace ShopHop
     public partial class EditListForm : Form
     {
         public ShopHop.GroceryList GClist;
+
+       
         private void EditListForm_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+
+            GClist.addItem("milk");
+            GClist.addItem("eggs");
+            GClist.addItem("cheese");
+
+            GClist.ShowGroceryList(GClist);
         }
 
         public EditListForm(ListBox.ObjectCollection objectCollection)
