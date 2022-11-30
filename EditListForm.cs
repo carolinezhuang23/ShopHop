@@ -23,7 +23,7 @@ namespace ShopHop
             GClist.addItem("milk");
             GClist.addItem("eggs");
             GClist.addItem("cheese");
-
+             
             GClist.ShowGroceryList(GClist);
         }
 
