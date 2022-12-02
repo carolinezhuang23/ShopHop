@@ -66,6 +66,7 @@
       <DependentUpon>GroceryDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\TitlesModel.cs" />
+    <Compile Include="Models\UpdateGroceryItemsEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EditListForm.resx">

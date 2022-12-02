@@ -34,7 +34,7 @@ namespace ShopHop
             this.deleteTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.addItemButton = new System.Windows.Forms.Button();
-            this.addItemTextBox = new System.Windows.Forms.TextBox();
+            this.txtAddItem = new System.Windows.Forms.TextBox();
             this.addLabel = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
@@ -57,7 +57,7 @@ namespace ShopHop
             this.groupBox1.Controls.Add(this.deleteTextBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.addItemButton);
-            this.groupBox1.Controls.Add(this.addItemTextBox);
+            this.groupBox1.Controls.Add(this.txtAddItem);
             this.groupBox1.Controls.Add(this.addLabel);
             this.groupBox1.Location = new System.Drawing.Point(390, 93);
             this.groupBox1.Name = "groupBox1";
@@ -92,13 +92,12 @@ namespace ShopHop
             this.addItemButton.UseVisualStyleBackColor = true;
             this.addItemButton.Click += new System.EventHandler(this.addItemButton_Click);
             // 
-            // addItemTextBox
+            // txtAddItem
             // 
-            this.addItemTextBox.Location = new System.Drawing.Point(50, 53);
-            this.addItemTextBox.Name = "addItemTextBox";
-            this.addItemTextBox.Size = new System.Drawing.Size(250, 20);
-            this.addItemTextBox.TabIndex = 1;
-            this.addItemTextBox.TextChanged += new System.EventHandler(this.addItemTextBox_TextChanged);
+            this.txtAddItem.Location = new System.Drawing.Point(50, 53);
+            this.txtAddItem.Name = "txtAddItem";
+            this.txtAddItem.Size = new System.Drawing.Size(250, 20);
+            this.txtAddItem.TabIndex = 1;
             // 
             // addLabel
             // 
@@ -145,7 +144,7 @@ namespace ShopHop
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label addLabel;
-        private System.Windows.Forms.TextBox addItemTextBox;
+        private System.Windows.Forms.TextBox txtAddItem;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button addItemButton;
         private System.Windows.Forms.Label label2;

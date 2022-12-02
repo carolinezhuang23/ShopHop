@@ -44,8 +44,7 @@ namespace ShopHop
             //display edit form
 
             //Grocery list shows up on edit list page
-            EditListForm form = new EditListForm(lstGroceryList.Items);
-            form.Show();
+            
         }
 
         private void deleteListButton_Click(object sender, EventArgs e)

@@ -10,44 +10,29 @@ namespace ShopHop
 {
     public class GroceryList
     {
-        ArrayList groceryItems = new ArrayList();
+        public string GroceryItem { get; set; }
         public GroceryList()
         {
-            //original items
-            groceryItems.Add(new GroceryItem("milk"));
-            groceryItems.Add(new GroceryItem("cheese"));
-            groceryItems.Add(new GroceryItem("eggs"));
-        }
-
-        //showing grocery list
-        public void ShowGroceryList(ArrayList items)
-        {
-            foreach (GroceryItem i in items)
-                Console.WriteLine(i.ToString());
-        }
-
-        //adding items to grocery list 
-        public  void addItem(string name)
-        {
-            groceryItems.Add(new GroceryItem(name));
-        }
-
-        
-    }
-
-
-    //Grocery Item Class
-    public class GroceryItem
-    {
-        public string Title;
-        public int amount;
-
-        public GroceryItem(string _title)
-        {
-            this.Title = _title;
             
         }
 
+        public GroceryList(string g)
+        {
+            GroceryItem = g;
+        }
+        
+        public static List<GroceryList> GetGroceryLists()
+        {
+            return new List<GroceryList>
+            {
+                new GroceryList("milk"),
+                new GroceryList("eggs"),
+                new GroceryList("cheese")
+            };
+        }
+       
+
         
     }
+
 }
