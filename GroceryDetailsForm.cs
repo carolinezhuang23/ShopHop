@@ -13,6 +13,7 @@ namespace ShopHop
 {
     public partial class GroceryDetailsForm : Form
     {
+        List<GroceryModel> Items = new List<GroceryModel>();
         public GroceryDetailsForm()
         {
             InitializeComponent();
@@ -22,27 +23,33 @@ namespace ShopHop
         {
             this.CenterToScreen();
             this.SetControls();
+
+            Items = GroceryModel.GetGroceries();
+
+            this.PopulateGroceries();
         }
 
         private void SetControls()
         {
-            this.PopulateGroceries();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void PopulateGroceries()
         {
-            //Example grocery items 
-            lstGroceryList.Items.Add("milk");
-            lstGroceryList.Items.Add("eggs");
-            lstGroceryList.Items.Add("cheese");
-            lstGroceryList.SelectionMode = SelectionMode.MultiSimple;
+            //Get grocery items from the GroceryModel
+            var items = (from i in Items
+                         select i.Grocery).ToList();
+
+            this.lstGroceryList.DataSource = items;
         }
 
         //Editing Grocery List
         private void editListButton_Click(object sender, EventArgs e)
         {
             //display edit form
-
+            
             //Grocery list shows up on edit list page
             
         }
@@ -70,6 +77,13 @@ namespace ShopHop
             this.PopulateGroceries();
         }
 
-    
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            AddItemsForm frm2 = new AddItemsForm();
+
+            frm2.Items = this.Items; 
+
+            
+        }
     }
 }

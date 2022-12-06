@@ -31,9 +31,9 @@ namespace ShopHop
         {
             this.lstGroceryList = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.editListButton = new System.Windows.Forms.Button();
             this.deleteListButton = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.addFormButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstGroceryList
@@ -46,7 +46,6 @@ namespace ShopHop
             this.lstGroceryList.Name = "lstGroceryList";
             this.lstGroceryList.Size = new System.Drawing.Size(273, 429);
             this.lstGroceryList.TabIndex = 1;
-           
             // 
             // label1
             // 
@@ -60,23 +59,11 @@ namespace ShopHop
             this.label1.Text = "Grocery Details";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // editListButton
-            // 
-            this.editListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
-            this.editListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.editListButton.Location = new System.Drawing.Point(418, 113);
-            this.editListButton.Name = "editListButton";
-            this.editListButton.Size = new System.Drawing.Size(210, 54);
-            this.editListButton.TabIndex = 3;
-            this.editListButton.Text = "Edit";
-            this.editListButton.UseVisualStyleBackColor = false;
-            this.editListButton.Click += new System.EventHandler(this.editListButton_Click);
-            // 
             // deleteListButton
             // 
             this.deleteListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
             this.deleteListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.deleteListButton.Location = new System.Drawing.Point(418, 234);
+            this.deleteListButton.Location = new System.Drawing.Point(418, 371);
             this.deleteListButton.Name = "deleteListButton";
             this.deleteListButton.Size = new System.Drawing.Size(213, 57);
             this.deleteListButton.TabIndex = 4;
@@ -88,7 +75,7 @@ namespace ShopHop
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.btnAdd.Location = new System.Drawing.Point(418, 346);
+            this.btnAdd.Location = new System.Drawing.Point(418, 473);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(210, 56);
             this.btnAdd.TabIndex = 5;
@@ -96,15 +83,27 @@ namespace ShopHop
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // addFormButton
+            // 
+            this.addFormButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.addFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.addFormButton.Location = new System.Drawing.Point(415, 100);
+            this.addFormButton.Name = "addFormButton";
+            this.addFormButton.Size = new System.Drawing.Size(213, 59);
+            this.addFormButton.TabIndex = 6;
+            this.addFormButton.Text = "Add New Items";
+            this.addFormButton.UseVisualStyleBackColor = false;
+            this.addFormButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
             // GroceryDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(685, 579);
+            this.Controls.Add(this.addFormButton);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.deleteListButton);
-            this.Controls.Add(this.editListButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstGroceryList);
             this.Name = "GroceryDetailsForm";
@@ -118,8 +117,8 @@ namespace ShopHop
         #endregion
         private System.Windows.Forms.ListBox lstGroceryList;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button editListButton;
         private System.Windows.Forms.Button deleteListButton;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button addFormButton;
     }
 }
