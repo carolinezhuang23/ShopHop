@@ -10,14 +10,14 @@ namespace ShopHop.Models
     {
 
         //ArrayList
-        private List<GroceryList> items = new List<GroceryList>();
+        private List<GroceryModel> items = new List<GroceryModel>();
 
-        public UpdateGroceryItemsEventArgs(List<GroceryList> i)
+        public UpdateGroceryItemsEventArgs(List<GroceryModel> i)
         {
             items = i;
         }
 
-        public List<GroceryList> GetGroceryLists
+        public List<GroceryModel> GetGroceries
         {
             get
             {

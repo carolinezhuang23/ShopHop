@@ -77,13 +77,22 @@ namespace ShopHop
             this.PopulateGroceries();
         }
 
-        private void addButton_Click(object sender, EventArgs e)
+        private void addFormButton_Click(object sender, EventArgs e)
         {
             AddItemsForm frm2 = new AddItemsForm();
 
-            frm2.Items = this.Items; 
+            frm2.Items = this.Items;
 
-            
+            frm2.UpdateGroceries += new AddItemsForm.GroceriesHandler(GroceriesUpdate);
+
+            frm2.ShowDialog();
+        }
+
+        private void GroceriesUpdate(object s, UpdateGroceryItemsEventArgs e)
+        {
+            Items = e.GetGroceries;
+
+            this.PopulateGroceries();
         }
     }
 }

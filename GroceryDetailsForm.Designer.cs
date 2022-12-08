@@ -93,7 +93,7 @@ namespace ShopHop
             this.addFormButton.TabIndex = 6;
             this.addFormButton.Text = "Add New Items";
             this.addFormButton.UseVisualStyleBackColor = false;
-            this.addFormButton.Click += new System.EventHandler(this.addButton_Click);
+            this.addFormButton.Click += new System.EventHandler(this.addFormButton_Click);
             // 
             // GroceryDetailsForm
             // 

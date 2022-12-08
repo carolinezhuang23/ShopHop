@@ -30,7 +30,7 @@ namespace ShopHop
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtItem = new System.Windows.Forms.TextBox();
             this.addItemButton = new System.Windows.Forms.Button();
             this.addFormCloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,12 +45,12 @@ namespace ShopHop
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Items";
             // 
-            // textBox1
+            // txtItem
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtItem.Location = new System.Drawing.Point(113, 88);
+            this.txtItem.Name = "txtItem";
+            this.txtItem.Size = new System.Drawing.Size(265, 20);
+            this.txtItem.TabIndex = 1;
             // 
             // addItemButton
             // 
@@ -72,6 +72,7 @@ namespace ShopHop
             this.addFormCloseButton.TabIndex = 3;
             this.addFormCloseButton.Text = "Close ";
             this.addFormCloseButton.UseVisualStyleBackColor = true;
+            this.addFormCloseButton.Click += new System.EventHandler(this.addFormCloseButton_Click);
             // 
             // AddItemsForm
             // 
@@ -81,7 +82,7 @@ namespace ShopHop
             this.ClientSize = new System.Drawing.Size(477, 350);
             this.Controls.Add(this.addFormCloseButton);
             this.Controls.Add(this.addItemButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtItem);
             this.Controls.Add(this.label1);
             this.Name = "AddItemsForm";
             this.Text = "AddItems";
@@ -93,7 +94,7 @@ namespace ShopHop
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtItem;
         private System.Windows.Forms.Button addItemButton;
         private System.Windows.Forms.Button addFormCloseButton;
     }
