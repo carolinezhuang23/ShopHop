@@ -25,8 +25,8 @@ namespace ShopHop.Models
             return new List<GroceryModel>
             {
                 new GroceryModel("milk"),
-            new GroceryModel("eggs"),
-            new GroceryModel("cheese")
+                new GroceryModel("eggs"),
+                new GroceryModel("cheese")
 
             };
 

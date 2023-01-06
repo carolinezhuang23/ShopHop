@@ -63,7 +63,7 @@ namespace ShopHop
                                                   MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
-                this.lstGroceryList.Items.Clear();
+                lstGroceryList.Items.Clear();
                 
             }
 
@@ -72,10 +72,6 @@ namespace ShopHop
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            this.PopulateGroceries();
-        }
 
         private void addFormButton_Click(object sender, EventArgs e)
         {
@@ -93,6 +89,21 @@ namespace ShopHop
             Items = e.GetGroceries;
 
             this.PopulateGroceries();
+        }
+
+        private void deleteItemButton_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to delete this item?";
+
+            DialogResult result = MessageBox.Show(message, TitlesModel.MessageBoxTitle,
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+            {
+                lstGroceryList.Items.Remove(lstGroceryList.SelectedItem);
+
+            }
+            
         }
     }
 }
