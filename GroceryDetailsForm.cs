@@ -42,17 +42,10 @@ namespace ShopHop
             var items = (from i in Items
                          select i.Grocery).ToList();
 
-            this.lstGroceryList.DataSource = items;
+            lstGroceryList.DataSource = items;
         }
 
-        //Editing Grocery List
-        private void editListButton_Click(object sender, EventArgs e)
-        {
-            //display edit form
-            
-            //Grocery list shows up on edit list page
-            
-        }
+        
 
         private void deleteListButton_Click(object sender, EventArgs e)
         {
