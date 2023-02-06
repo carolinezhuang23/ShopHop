@@ -86,6 +86,7 @@ namespace ShopHop
             this.Controls.Add(this.label1);
             this.Name = "AddItemsForm";
             this.Text = "AddItems";
+            this.Load += new System.EventHandler(this.AddItemsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

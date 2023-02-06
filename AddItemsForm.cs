@@ -28,6 +28,7 @@ namespace ShopHop
         {
             this.CenterToScreen();
             this.SetControls();
+
         }
 
         private void SetControls()
@@ -88,6 +89,7 @@ namespace ShopHop
 
             return true;
         }
+
         
     }
 }

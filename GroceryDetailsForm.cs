@@ -56,6 +56,7 @@ namespace ShopHop
                                                   MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
+                this.lstGroceryList.DataSource = null;
                 lstGroceryList.Items.Clear();
                 
             }
@@ -93,10 +94,11 @@ namespace ShopHop
                                                   MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
-                lstGroceryList.Items.Remove(lstGroceryList.SelectedItem);
+                Items.RemoveAll(x => x.Grocery == this.lstGroceryList.SelectedValue.ToString());
 
+                this.PopulateGroceries();
             }
-            
+
         }
     }
 }
