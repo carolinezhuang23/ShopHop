@@ -100,5 +100,10 @@ namespace ShopHop
             }
 
         }
+
+        private void lstGroceryList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

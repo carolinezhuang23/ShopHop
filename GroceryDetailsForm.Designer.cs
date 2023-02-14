@@ -46,6 +46,7 @@ namespace ShopHop
             this.lstGroceryList.Name = "lstGroceryList";
             this.lstGroceryList.Size = new System.Drawing.Size(273, 429);
             this.lstGroceryList.TabIndex = 1;
+            this.lstGroceryList.SelectedIndexChanged += new System.EventHandler(this.lstGroceryList_SelectedIndexChanged);
             // 
             // label1
             // 

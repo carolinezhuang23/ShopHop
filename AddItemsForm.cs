@@ -17,7 +17,7 @@ namespace ShopHop
 
         public event GroceriesHandler UpdateGroceries;
 
-        public List<GroceryModel> Items; 
+        public List<GroceryModel> Items;
 
         public AddItemsForm()
         {
@@ -76,6 +76,8 @@ namespace ShopHop
 
         private bool PerformValidation()
         {
+            
+
             //Verify that textbox is not empty
             if (String.IsNullOrEmpty(this.txtItem.Text.Trim()))
             {
@@ -84,12 +86,23 @@ namespace ShopHop
 
                 //Set Focus to Item Textbox
                 this.txtItem.Focus();
+                
                 return false;
             }
+            else if (Items.Contains(this.txtItem.Text.Trim())){
+
+                MessageBox.Show("This item already exists!", TitlesModel.MessageBoxTitle,
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                this.txtItem.Focus();
+            }
+            
 
             return true;
         }
-
+        
+        
+        
         
     }
 }
