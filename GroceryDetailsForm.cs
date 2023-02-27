@@ -41,8 +41,9 @@ namespace ShopHop
             //Get grocery items from the GroceryModel
             var items = (from i in Items
                          select i.Grocery).ToList();
-
+            lstGroceryList.Sorted = true;
             lstGroceryList.DataSource = items;
+            
         }
 
         
@@ -105,5 +106,7 @@ namespace ShopHop
         {
 
         }
+
+        
     }
 }

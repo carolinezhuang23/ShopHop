@@ -64,7 +64,7 @@ namespace ShopHop
             // 
             this.deleteListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
             this.deleteListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.deleteListButton.Location = new System.Drawing.Point(418, 371);
+            this.deleteListButton.Location = new System.Drawing.Point(412, 419);
             this.deleteListButton.Name = "deleteListButton";
             this.deleteListButton.Size = new System.Drawing.Size(213, 57);
             this.deleteListButton.TabIndex = 4;
@@ -88,7 +88,7 @@ namespace ShopHop
             // 
             this.deleteItemButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
             this.deleteItemButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.deleteItemButton.Location = new System.Drawing.Point(418, 229);
+            this.deleteItemButton.Location = new System.Drawing.Point(415, 254);
             this.deleteItemButton.Name = "deleteItemButton";
             this.deleteItemButton.Size = new System.Drawing.Size(210, 53);
             this.deleteItemButton.TabIndex = 7;

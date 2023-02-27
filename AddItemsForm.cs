@@ -53,7 +53,7 @@ namespace ShopHop
             if (!this.PerformValidation())
                 return;
             this.AddItem();
-
+            
             
         }
 
@@ -89,13 +89,7 @@ namespace ShopHop
                 
                 return false;
             }
-            else if (Items.Contains(this.txtItem.Text.Trim())){
-
-                MessageBox.Show("This item already exists!", TitlesModel.MessageBoxTitle,
-                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                this.txtItem.Focus();
-            }
+            
             
 
             return true;
