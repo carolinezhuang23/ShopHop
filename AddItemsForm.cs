@@ -60,6 +60,7 @@ namespace ShopHop
         private void AddItem()
         {
             //User adding grocery list. Add to the list
+            
             Items.Add(new GroceryModel()
             {
                 Grocery = this.txtItem.Text.Trim()
@@ -76,7 +77,20 @@ namespace ShopHop
 
         private bool PerformValidation()
         {
-            
+            //LINQ
+            var found = (from i in Items
+                         where i.Grocery == this.txtItem.Text.Trim()
+                         select i).ToArray();
+
+            if (found.Count() > 0)
+            {
+                MessageBox.Show("This seems to be a duplicate item!", TitlesModel.MessageBoxTitle,
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                this.txtItem.Focus();
+
+                return false;
+            }
 
             //Verify that textbox is not empty
             if (String.IsNullOrEmpty(this.txtItem.Text.Trim()))
@@ -94,9 +108,5 @@ namespace ShopHop
 
             return true;
         }
-        
-        
-        
-        
     }
 }
