@@ -95,7 +95,7 @@ namespace ShopHop
                                                   MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
-                Items.RemoveAll(x => x.Grocery == this.lstGroceryList.SelectedValue.ToString());
+                Items.RemoveAll(x => x.Grocery.Equals(this.lstGroceryList.SelectedItem.ToString()));
 
                 this.PopulateGroceries();
             }
